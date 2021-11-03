@@ -1,6 +1,8 @@
 describe('index.js', function () {
   const drivers = ['Sally', 'Bob', 'Freddy', 'Claudia'];
 
+  // hey we want the keyword 'drivers' to point to an an array of data
+
   afterEach(function () {
     expect(drivers, 'MAKE SURE YOUR ARRAY MANIPULATIONS ARE NON-DESTRUCTIVE').to.eql(['Sally', 'Bob', 'Freddy', 'Claudia']);
   });
@@ -8,6 +10,7 @@ describe('index.js', function () {
   describe('returnFirstTwoDrivers()', function () {
     it('should return a new array containing the first two drivers from the passed-in array', function () {
       expect(returnFirstTwoDrivers(drivers)).to.eql(['Sally', 'Bob']);
+      // it doesn't pass the entire drivers variable, it passes the array that the variable refers
     });
   });
 
